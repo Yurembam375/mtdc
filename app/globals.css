@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #061D2B;
+  --color-navy-dark: #04141E;
+  --color-navy-light: #0D2A3A;
+  --color-accent-orange: #D85C3A;
+  --color-accent-orange-hover: #C04E2E;
+  --color-light-bg: #F6F7F5;
+  --color-card-border: #D9DEE2;
+  --color-brand-text: #102B3C;
+  --color-brand-muted: #687783;
+
+  --font-manrope: var(--font-manrope), 'Manrope', sans-serif;
+  --font-mono: var(--font-ibm-plex-mono), 'IBM Plex Mono', monospace;
+  --font-ibm-sans: var(--font-ibm-plex-sans), 'IBM Plex Sans', sans-serif;
+}
+
+:root {
+  --font-sans: var(--font-ibm-plex-sans), 'IBM Plex Sans', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #F6F7F5;
+  color: #102B3C;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-ibm-mono {
+  font-family: var(--font-ibm-plex-mono), 'IBM Plex Mono', monospace;
+}
+
+.font-manrope {
+  font-family: var(--font-manrope), 'Manrope', sans-serif;
+}
+
+.font-ibm-sans {
+  font-family: var(--font-ibm-plex-sans), 'IBM Plex Sans', sans-serif;
+}
+
+/* Custom scrollbar and utilities for government institutional feel */
+::selection {
+  background-color: #D85C3A;
+  color: #ffffff;
+}

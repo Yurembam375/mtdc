@@ -114,32 +114,34 @@ export default function AboutPage() {
       {/* 3. Corporate Overview & Legal Mandate */}
       <section className="py-12 sm:py-16">
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
             {/* Left Narrative */}
-            <div className="lg:col-span-7 bg-white border border-[#D9DEE2] rounded-lg p-6 sm:p-8 shadow-xs">
-              <div className="flex items-center gap-2 mb-2">
-                <span className="text-[#D85C3A] text-sm font-bold leading-none">—</span>
-                <span className="text-[11px] font-bold tracking-wider uppercase text-[#D85C3A] font-ibm-mono">
-                  INSTITUTIONAL CHARTER
-                </span>
-              </div>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#102B3C] font-manrope tracking-tight leading-snug">
-                Building Pathways to Inclusive Socio-Economic Growth
-              </h2>
-              <div className="mt-4 space-y-3.5 text-[13.5px] sm:text-[14px] text-gray-700 font-ibm-sans leading-relaxed">
-                <p>
-                  Manipur Tribal Development Corporation Limited was incorporated under the Companies Act as a wholly-owned Government of Manipur undertaking. Operating under the administrative control of the Department of Tribal Affairs & Hills, the Corporation serves as the specialized nodal engineering and project execution arm.
-                </p>
-                <p>
-                  Our mandate encompasses the formulation, design, tendering, and turnkey execution of public infrastructure projects in the hill and scheduled areas. These include all-weather rural roads, bridges, drinking water supply networks, multi-purpose community resource centres, residential school complexes, and market sheds.
-                </p>
-                <p className="text-gray-500">
-                  Through rigorous adherence to state public works standards, social environmental safeguards, and digital transparency, MTDC continues to bridge connectivity divides and foster community resilience across Manipur.
-                </p>
+            <div className="lg:col-span-7 bg-white border border-[#D9DEE2] rounded-lg p-6 sm:p-8 shadow-xs flex flex-col justify-between h-full">
+              <div>
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-[#D85C3A] text-sm font-bold leading-none">—</span>
+                  <span className="text-[11px] font-bold tracking-wider uppercase text-[#D85C3A] font-ibm-mono">
+                    INSTITUTIONAL CHARTER
+                  </span>
+                </div>
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-[#102B3C] font-manrope tracking-tight leading-snug">
+                  Building Pathways to Inclusive Socio-Economic Growth
+                </h2>
+                <div className="mt-4 space-y-3.5 text-[13.5px] sm:text-[14px] text-gray-700 font-ibm-sans leading-relaxed">
+                  <p>
+                    Manipur Tribal Development Corporation Limited was incorporated under the Companies Act as a wholly-owned Government of Manipur undertaking. Operating under the administrative control of the Department of Tribal Affairs & Hills, the Corporation serves as the specialized nodal engineering and project execution arm.
+                  </p>
+                  <p>
+                    Our mandate encompasses the formulation, design, tendering, and turnkey execution of public infrastructure projects in the hill and scheduled areas. These include all-weather rural roads, bridges, drinking water supply networks, multi-purpose community resource centres, residential school complexes, and market sheds.
+                  </p>
+                  <p className="text-gray-500">
+                    Through rigorous adherence to state public works standards, social environmental safeguards, and digital transparency, MTDC continues to bridge connectivity divides and foster community resilience across Manipur.
+                  </p>
+                </div>
               </div>
 
               {/* Action Buttons */}
-              <div className="mt-6 pt-5 border-t border-[#D9DEE2]/60 flex flex-wrap gap-4 items-center">
+              <div className="mt-8 pt-5 border-t border-[#D9DEE2]/60 flex flex-wrap gap-4 items-center">
                 <Link
                   href="/projects"
                   className="inline-flex items-center gap-2 px-5 py-2.5 rounded bg-[#D85C3A] hover:bg-[#C04E2E] text-white text-[13px] font-medium tracking-wide transition-all shadow-xs"
@@ -158,8 +160,8 @@ export default function AboutPage() {
             </div>
 
             {/* Right Statutory Info Box */}
-            <div className="lg:col-span-5 space-y-6">
-              <div className="bg-white border border-[#D9DEE2] rounded-lg p-6 shadow-xs">
+            <div className="lg:col-span-5 flex flex-col justify-between gap-6 h-full">
+              <div className="bg-white border border-[#D9DEE2] rounded-lg p-6 shadow-xs flex-1 flex flex-col justify-between">
                 <div className="flex items-center gap-3 pb-4 border-b border-[#D9DEE2]">
                   <div className="w-10 h-10 rounded-md bg-[#061D2B] text-white flex items-center justify-center shrink-0">
                     <ShieldCheck className="w-5 h-5 text-[#D85C3A]" />
@@ -174,7 +176,7 @@ export default function AboutPage() {
                   </div>
                 </div>
 
-                <div className="mt-4 space-y-3 font-ibm-mono text-[11px]">
+                <div className="mt-4 flex-1 flex flex-col justify-between space-y-2 font-ibm-mono text-[11px]">
                   <div className="flex justify-between py-2 border-b border-gray-100">
                     <span className="text-gray-500 uppercase">CIN</span>
                     <span className="font-bold text-[#102B3C]">U45201MN1974SGC001607</span>
@@ -199,7 +201,7 @@ export default function AboutPage() {
               </div>
 
               {/* Core Values Card */}
-              <div className="bg-[#061D2B] text-white rounded-lg p-6 shadow-xs border border-white/10">
+              <div className="bg-[#061D2B] text-white rounded-lg p-6 shadow-xs border border-white/10 shrink-0">
                 <div className="flex items-center gap-2 mb-3">
                   <Award className="w-4 h-4 text-[#D85C3A]" />
                   <span className="text-[11px] font-bold text-[#D85C3A] font-ibm-mono tracking-wider uppercase">

@@ -44,7 +44,6 @@ export default function GovernmentBar() {
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 h-7 flex items-center justify-between">
         {/* Left branding */}
         <div className="flex items-center gap-2 font-ibm-sans">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#D85C3A] inline-block shrink-0" />
           <span className="font-semibold text-white tracking-wider text-[11px] uppercase">
             GOVERNMENT OF MANIPUR
           </span>

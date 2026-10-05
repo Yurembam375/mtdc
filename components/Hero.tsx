@@ -9,20 +9,24 @@ export default function Hero() {
       {/* Background Image with Gate and Gradient */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/assets/hero-bg.jpg"
-          alt="Manipur Tribal Development Corporation Entrance and Administrative Office"
+          src="/assets/hero-image.png"
+          alt="Manipur Tribal Development Corporation Entrance Gate and Administrative Complex"
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[center_right] sm:object-center"
+          className="object-cover object-right sm:object-center"
         />
-        {/* Responsive Overlay: Deep navy on mobile for crystal clear readability, fading gradient on desktop */}
-        <div className="absolute inset-0 bg-[#061D2B]/85 sm:bg-transparent sm:bg-gradient-to-r sm:from-[#061D2B] sm:via-[#061D2B]/95 sm:via-40% md:via-[#061D2B]/85 sm:to-transparent z-10" />
+        {/* Responsive Overlay: Deep navy on mobile for readability, clear on desktop to show the image's gradient */}
+        <div className="absolute inset-0 bg-[#061D2B]/80 sm:bg-transparent z-10" />
       </div>
 
       {/* Hero Foreground Content */}
       <div className="relative z-20 max-w-[1240px] mx-auto px-4 sm:px-6 py-8 sm:py-10 lg:py-14 w-full flex flex-col justify-between">
         <div className="max-w-2xl">
+          {/* Eyebrow text */}
+          <p className="text-gray-300/90 uppercase font-ibm-mono text-[10px] sm:text-[11.5px] tracking-wider mb-3.5 sm:mb-4">
+            GOVERNMENT OF MANIPUR • DEPARTMENT OF TRIBAL AFFAIRS &amp; HILLS
+          </p>
 
           {/* Main Heading with increased line gap */}
           <h1 className="text-white font-manrope font-extrabold text-[28px] sm:text-[36px] md:text-[42px] lg:text-[46px] leading-[38px] sm:leading-[46px] md:leading-[52px] lg:leading-[56px] tracking-tight sm:tracking-[-1.14px]">
@@ -38,7 +42,7 @@ export default function Hero() {
           {/* CTA Buttons */}
           <div className="mt-7 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-3.5 w-full sm:w-auto">
             <Link
-              href="#quick-access"
+              href="#updates"
               className="w-full sm:w-[215px] h-12 inline-flex items-center justify-center gap-2 rounded bg-[#D85C3A] hover:bg-[#C04E2E] text-white text-[13.5px] font-semibold tracking-wide transition-all shadow-sm group cursor-pointer font-ibm-sans text-center"
             >
               <span>Explore Public Portal</span>

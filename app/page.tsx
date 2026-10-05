@@ -1,7 +1,6 @@
 import GovernmentBar from "@/components/GovernmentBar";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import QuickAccess from "@/components/QuickAccess";
 import UpdatesAndTenders from "@/components/UpdatesAndTenders";
 import AboutMTDC from "@/components/AboutMTDC";
 import Projects from "@/components/Projects";
@@ -15,10 +14,7 @@ export default function Home() {
       {/* 1. Hero Section */}
       <Hero />
 
-      {/* 2. Quick Access Navigation */}
-      <QuickAccess />
-
-      {/* 3. Latest Updates & Tenders */}
+      {/* 2. Latest Updates & Tenders */}
       <UpdatesAndTenders />
 
       {/* 4. About MTDC Section */}

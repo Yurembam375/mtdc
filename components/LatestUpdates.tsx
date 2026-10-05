@@ -187,26 +187,26 @@ export default function LatestUpdates() {
       {/* Read More Official Notice Modal */}
       {selectedUpdate && (
         <div
-          className="fixed inset-0 z-50 bg-[#061D2B]/75 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto animate-in fade-in duration-150"
+          className="fixed inset-0 z-50 bg-[#061D2B]/75 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4 overflow-y-auto animate-in fade-in duration-150"
           onClick={() => setSelectedUpdate(null)}
           role="dialog"
           aria-modal="true"
           aria-labelledby="modal-title"
         >
           <div
-            className="bg-white rounded-lg border border-[#D9DEE2] max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative animate-in zoom-in-95 duration-200"
+            className="bg-white rounded-lg border border-[#D9DEE2] max-w-3xl w-full shadow-2xl relative animate-in zoom-in-95 duration-200 overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header */}
-            <div className="bg-[#061D2B] text-white p-5 sm:p-6 flex items-start justify-between border-b border-[#102B3C]">
+            <div className="bg-[#061D2B] text-white px-5 py-3.5 sm:px-6 sm:py-4 flex items-center justify-between border-b border-[#102B3C]">
               <div>
-                <div className="flex items-center gap-2 mb-1.5">
+                <div className="flex items-center gap-2 mb-1">
                   <span className="w-2 h-2 rounded-full bg-[#D85C3A]" />
                   <span className="text-[10px] sm:text-[11px] font-bold tracking-wider uppercase font-ibm-mono text-gray-300">
                     MANIPUR TRIBAL DEVELOPMENT CORPORATION LIMITED
                   </span>
                 </div>
-                <div className="flex items-center gap-3 text-[11px] text-gray-300 font-ibm-mono mt-1">
+                <div className="flex items-center gap-2.5 text-[11px] text-gray-300 font-ibm-mono">
                   <span>{selectedUpdate.refNo}</span>
                   <span>•</span>
                   <span>{selectedUpdate.day} {selectedUpdate.monthYear}</span>
@@ -223,13 +223,13 @@ export default function LatestUpdates() {
             </div>
 
             {/* Modal Body */}
-            <div className="p-6 sm:p-7 space-y-5">
+            <div className="px-5 py-4 sm:px-6 sm:py-4.5 space-y-3">
               {/* Category & Tag */}
               <div className="flex items-center gap-2 flex-wrap">
-                <span className="px-2.5 py-1 rounded bg-[#F0F4F7] text-[#102B3C] text-[11px] font-semibold font-ibm-mono">
+                <span className="px-2.5 py-0.5 rounded bg-[#F0F4F7] text-[#102B3C] text-[10.5px] font-semibold font-ibm-mono">
                   {selectedUpdate.tag}
                 </span>
-                <span className="px-2.5 py-1 rounded bg-[#D85C3A]/10 text-[#D85C3A] text-[11px] font-semibold font-ibm-mono">
+                <span className="px-2.5 py-0.5 rounded bg-[#D85C3A]/10 text-[#D85C3A] text-[10.5px] font-semibold font-ibm-mono">
                   {selectedUpdate.category}
                 </span>
               </div>
@@ -237,25 +237,25 @@ export default function LatestUpdates() {
               {/* Title */}
               <h3
                 id="modal-title"
-                className="text-xl sm:text-[22px] font-extrabold text-[#102B3C] font-manrope leading-snug"
+                className="text-lg sm:text-[20px] font-extrabold text-[#102B3C] font-manrope leading-snug"
               >
                 {selectedUpdate.title}
               </h3>
 
               {/* Detailed Background Text */}
-              <p className="text-[13.5px] text-gray-700 font-ibm-sans leading-relaxed">
+              <p className="text-[12.5px] sm:text-[13px] text-gray-700 font-ibm-sans leading-relaxed">
                 {selectedUpdate.details}
               </p>
 
               {/* Bullet Key Points */}
-              <div className="bg-[#F6F7F5] border border-[#D9DEE2] rounded-md p-4 sm:p-5">
-                <h4 className="text-[12px] font-bold uppercase tracking-wider text-[#102B3C] font-ibm-mono mb-3">
+              <div className="bg-[#F6F7F5] border border-[#D9DEE2] rounded-md px-3.5 py-2.5 sm:px-4 sm:py-3">
+                <h4 className="text-[10.5px] font-bold uppercase tracking-wider text-[#102B3C] font-ibm-mono mb-2">
                   Key Resolutions &amp; Directives
                 </h4>
-                <ul className="space-y-2.5">
+                <ul className="space-y-1.5 sm:space-y-2">
                   {selectedUpdate.bullets.map((bullet, idx) => (
-                    <li key={idx} className="flex items-start gap-2.5 text-[12.5px] text-gray-600 font-ibm-sans leading-normal">
-                      <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                    <li key={idx} className="flex items-start gap-2 text-[11.5px] sm:text-[12px] text-gray-600 font-ibm-sans leading-snug">
+                      <CheckCircle className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
                       <span>{bullet}</span>
                     </li>
                   ))}
@@ -270,11 +270,11 @@ export default function LatestUpdates() {
             </div>
 
             {/* Modal Footer */}
-            <div className="p-4 sm:p-5 bg-[#F9FAFB] border-t border-[#D9DEE2] flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div className="px-5 py-3 sm:px-6 sm:py-3 bg-[#F9FAFB] border-t border-[#D9DEE2] flex flex-col sm:flex-row items-center justify-between gap-2.5">
               <Link
                 href="/resources?tab=circulars"
                 onClick={() => setSelectedUpdate(null)}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2 text-[12.5px] font-medium text-[#102B3C] bg-white border border-[#D9DEE2] rounded hover:border-[#D85C3A] hover:text-[#D85C3A] transition-colors font-ibm-sans"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-3.5 py-1.5 text-[12px] font-medium text-[#102B3C] bg-white border border-[#D9DEE2] rounded hover:border-[#D85C3A] hover:text-[#D85C3A] transition-colors font-ibm-sans"
               >
                 <FileText className="w-3.5 h-3.5" />
                 <span>View All Official Circulars</span>
@@ -282,7 +282,7 @@ export default function LatestUpdates() {
               <button
                 type="button"
                 onClick={() => setSelectedUpdate(null)}
-                className="w-full sm:w-auto px-5 py-2 text-[12.5px] font-semibold text-white bg-[#061D2B] hover:bg-[#102B3C] rounded transition-colors font-ibm-sans cursor-pointer"
+                className="w-full sm:w-auto px-4 py-1.5 text-[12px] font-semibold text-white bg-[#061D2B] hover:bg-[#102B3C] rounded transition-colors font-ibm-sans cursor-pointer"
               >
                 Close Notice
               </button>

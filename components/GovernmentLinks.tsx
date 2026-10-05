@@ -1,106 +1,88 @@
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
-import {
-  ExternalLink,
-  Landmark,
-  Users,
-  Share2,
-  Gavel,
-  Globe,
-} from "lucide-react";
 
-interface GovLinkItem {
-  title: string;
+interface GovPortal {
+  id: string;
+  name: string;
   url: string;
-  displayUrl: string;
-  icon: React.ElementType;
+  image: string;
+  alt: string;
 }
 
-const GOV_LINKS: GovLinkItem[] = [
+const GOV_PORTALS: GovPortal[] = [
   {
-    title: "Govt. of Manipur",
-    url: "https://manipur.gov.in",
-    displayUrl: "manipur.gov.in",
-    icon: Landmark,
+    id: "mygov",
+    name: "MyGov",
+    url: "https://www.mygov.in",
+    image: "/assets/logo-mygov.png",
+    alt: "myGov मेरी सरकार Official Portal",
   },
   {
-    title: "Dept. of Tribal Affairs",
-    url: "https://tahmanipur.gov.in",
-    displayUrl: "tahmanipur.gov.in",
-    icon: Users,
+    id: "g20",
+    name: "G20 India",
+    url: "https://www.g20.org",
+    image: "/assets/logo-g20.png",
+    alt: "G20 भारत 2023 INDIA Official Portal",
   },
   {
-    title: "State Citizen Portal",
-    url: "https://serviceonline.gov.in",
-    displayUrl: "serviceonline.gov.in",
-    icon: Share2,
+    id: "amrit-mahotsav",
+    name: "Azadi Ka Amrit Mahotsav",
+    url: "https://amritmahotsav.nic.in",
+    image: "/assets/logo-amrit-mahotsav.png",
+    alt: "75 Azadi Ka Amrit Mahotsav Official Portal",
   },
   {
-    title: "e-Procurement Portal",
-    url: "https://manipurtenders.gov.in",
-    displayUrl: "manipurtenders.gov.in",
-    icon: Gavel,
-  },
-  {
-    title: "Digital India",
-    url: "https://digitalindia.gov.in",
-    displayUrl: "digitalindia.gov.in",
-    icon: Globe,
+    id: "digital-india",
+    name: "Digital India",
+    url: "https://www.digitalindia.gov.in",
+    image: "/assets/logo-digital-india.png",
+    alt: "Digital India Power To Empower Official Portal",
   },
 ];
 
 export default function GovernmentLinks() {
   return (
-    <section className="py-12 sm:py-14 bg-[#F6F7F5] border-b border-[#D9DEE2]">
+    <section className="py-8 sm:py-14 bg-[#F6F7F5] border-b border-[#D9DEE2]">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
         {/* Left-Aligned Heading */}
-        <div className="mb-6 sm:mb-8 text-left">
+        <div className="mb-5 sm:mb-8 text-left">
           <div className="flex items-center gap-2 mb-1.5">
             <span className="text-[#D85C3A] text-sm font-bold leading-none">—</span>
             <span className="text-[11px] font-bold tracking-wider uppercase text-[#D85C3A] font-ibm-mono">
-              STATE &amp; CENTRAL NODAL PORTALS
+              NATIONAL &amp; STATE INITIATIVES
             </span>
           </div>
-          <h2 className="text-2xl sm:text-[28px] font-extrabold text-[#102B3C] font-manrope tracking-tight leading-snug">
+          <h2 className="text-xl sm:text-[28px] font-extrabold text-[#102B3C] font-manrope tracking-tight leading-snug">
             Important Government Links
           </h2>
-          <p className="mt-1 text-[13px] sm:text-[14px] text-gray-500 font-ibm-sans">
+          <p className="mt-1 text-[12.5px] sm:text-[14px] text-gray-500 font-ibm-sans">
             Official government web directories, digital citizen portals, and procurement gateways.
           </p>
         </div>
 
-        {/* 5 Cards Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
-          {GOV_LINKS.map((link, index) => {
-            const Icon = link.icon;
-            const isLastOnMobile = index === 4;
-            return (
-              <Link
-                key={link.title}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`group bg-white border border-[#D9DEE2] rounded-lg p-3.5 sm:p-5 flex flex-col justify-between hover:border-[#D85C3A]/60 hover:shadow-xs transition-all duration-200 min-h-[110px] sm:min-h-[115px] ${
-                  isLastOnMobile ? "col-span-2 sm:col-span-1" : ""
-                }`}
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-2 sm:mb-3">
-                    <div className="w-7 h-7 sm:w-8 sm:h-8 rounded bg-[#061D2B] text-white flex items-center justify-center shrink-0">
-                      <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                    </div>
-                    <ExternalLink className="w-3.5 h-3.5 text-gray-400 group-hover:text-[#D85C3A] transition-colors" />
-                  </div>
-                  <h3 className="font-bold text-[#102B3C] text-[12.5px] sm:text-[14px] font-manrope group-hover:text-[#D85C3A] transition-colors leading-tight">
-                    {link.title}
-                  </h3>
-                  <p className="mt-1 text-[10px] sm:text-[11px] text-gray-400 font-ibm-mono leading-none truncate">
-                    {link.displayUrl}
-                  </p>
-                </div>
-              </Link>
-            );
-          })}
+        {/* 4 Portals in a single horizontal row across all screen sizes */}
+        <div className="flex items-center justify-between sm:grid sm:grid-cols-4 gap-2 sm:gap-8 pt-2 overflow-x-auto scrollbar-none">
+          {GOV_PORTALS.map((portal) => (
+            <Link
+              key={portal.id}
+              href={portal.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={`Visit ${portal.name} Official Portal`}
+              className="flex-1 sm:flex-initial flex items-center justify-center p-1 sm:p-3 transition-all duration-200 hover:scale-105 cursor-pointer group shrink-0"
+            >
+              <div className="relative h-9 sm:h-14 w-[76px] sm:w-[160px] md:w-[190px] flex items-center justify-center">
+                <Image
+                  src={portal.image}
+                  alt={portal.alt}
+                  fill
+                  sizes="(max-width: 640px) 80px, (max-width: 768px) 160px, 200px"
+                  className="object-contain filter group-hover:drop-shadow-xs transition-all duration-200"
+                />
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </section>

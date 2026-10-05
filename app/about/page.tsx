@@ -141,17 +141,17 @@ export default function AboutPage() {
               </div>
 
               {/* Action Buttons */}
-              <div className="mt-8 pt-5 border-t border-[#D9DEE2]/60 flex flex-wrap gap-4 items-center">
+              <div className="mt-8 pt-5 border-t border-[#D9DEE2]/60 flex flex-wrap gap-3.5 sm:gap-4 items-center">
                 <Link
                   href="/projects"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded bg-[#D85C3A] hover:bg-[#C04E2E] text-white text-[13px] font-medium tracking-wide transition-all shadow-xs"
+                  className="w-[215px] max-w-full h-11 inline-flex items-center justify-center gap-2 rounded bg-[#D85C3A] hover:bg-[#C04E2E] text-white text-[13px] font-medium tracking-wide transition-all shadow-xs"
                 >
                   <span>Explore Our Projects</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded bg-[#061D2B] hover:bg-[#102B3C] text-white text-[13px] font-medium tracking-wide transition-all shadow-xs"
+                  className="w-[215px] max-w-full h-11 inline-flex items-center justify-center gap-2 rounded bg-[#061D2B] hover:bg-[#102B3C] text-white text-[13px] font-medium tracking-wide transition-all shadow-xs"
                 >
                   <span>Contact Headquarters</span>
                   <ArrowRight className="w-3.5 h-3.5" />

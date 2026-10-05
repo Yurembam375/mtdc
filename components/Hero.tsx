@@ -23,13 +23,6 @@ export default function Hero() {
       {/* Hero Foreground Content */}
       <div className="relative z-20 max-w-[1240px] mx-auto px-4 sm:px-6 py-8 sm:py-10 lg:py-14 w-full flex flex-col justify-between">
         <div className="max-w-2xl">
-          {/* Eyebrow badge */}
-          <div className="inline-flex items-center gap-2 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-[4px] bg-[#0E2330]/90 border border-white/20 backdrop-blur-xs mb-4 sm:mb-5 max-w-full">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#D85C3A] inline-block shrink-0" />
-            <span className="text-white/90 uppercase font-ibm-mono text-[9px] sm:text-[11px] tracking-wider leading-relaxed">
-              GOVERNMENT OF MANIPUR • DEPARTMENT OF TRIBAL AFFAIRS &amp; HILLS
-            </span>
-          </div>
 
           {/* Main Heading with increased line gap */}
           <h1 className="text-white font-manrope font-extrabold text-[28px] sm:text-[36px] md:text-[42px] lg:text-[46px] leading-[38px] sm:leading-[46px] md:leading-[52px] lg:leading-[56px] tracking-tight sm:tracking-[-1.14px]">
@@ -46,7 +39,7 @@ export default function Hero() {
           <div className="mt-7 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-3.5 w-full sm:w-auto">
             <Link
               href="#quick-access"
-              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded bg-[#D85C3A] hover:bg-[#C04E2E] text-white text-[13.5px] font-semibold tracking-wide transition-all shadow-sm group cursor-pointer font-ibm-sans w-full sm:w-auto text-center"
+              className="w-full sm:w-[215px] h-12 inline-flex items-center justify-center gap-2 rounded bg-[#D85C3A] hover:bg-[#C04E2E] text-white text-[13.5px] font-semibold tracking-wide transition-all shadow-sm group cursor-pointer font-ibm-sans text-center"
             >
               <span>Explore Public Portal</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform shrink-0" />
@@ -54,7 +47,7 @@ export default function Hero() {
 
             <Link
               href="/about"
-              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded bg-[#102B3C]/90 hover:bg-[#102B3C] border border-white/20 hover:border-white/40 text-white text-[13.5px] font-semibold tracking-wide transition-all backdrop-blur-xs group cursor-pointer font-ibm-sans w-full sm:w-auto text-center"
+              className="w-full sm:w-[215px] h-12 inline-flex items-center justify-center gap-2 rounded bg-[#102B3C]/90 hover:bg-[#102B3C] border border-white/20 hover:border-white/40 text-white text-[13.5px] font-semibold tracking-wide transition-all backdrop-blur-xs group cursor-pointer font-ibm-sans text-center"
             >
               <span>About MTDC</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform shrink-0" />

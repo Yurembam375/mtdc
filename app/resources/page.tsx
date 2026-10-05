@@ -13,6 +13,7 @@ import {
   AlertCircle,
   Shield,
   HelpCircle,
+  ArrowRight,
 } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 
@@ -296,10 +297,14 @@ function ResourcesContent() {
               <p className="text-[12.5px] text-gray-600 font-ibm-sans leading-relaxed">
                 Citizens can file RTI applications concerning MTDC project sanctions, contractor bill payments, and administrative decisions directly to the State Public Information Officer (SPIO), MTDC Administrative Office, Lamphelpat.
               </p>
-              <div className="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between text-xs font-ibm-sans">
-                <span className="text-gray-500 font-ibm-mono">Statutory Fee: ₹10 (IPO/DD)</span>
-                <Link href="/contact" className="font-semibold text-[#D85C3A] hover:underline">
-                  Contact SPIO &rarr;
+              <div className="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between gap-3 text-xs font-ibm-sans">
+                <span className="text-gray-500 font-ibm-mono text-[11px] sm:text-xs">Statutory Fee: ₹10 (IPO/DD)</span>
+                <Link
+                  href="/contact"
+                  className="font-semibold text-[#D85C3A] hover:text-[#C04E2E] inline-flex items-center gap-1 shrink-0 whitespace-nowrap group transition-colors"
+                >
+                  <span className="group-hover:underline">Contact SPIO</span>
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                 </Link>
               </div>
             </div>
@@ -322,10 +327,14 @@ function ResourcesContent() {
               <p className="text-[12.5px] text-gray-600 font-ibm-sans leading-relaxed">
                 Outlining guaranteed timeframes for contractor security refunds, public grievance redressals, technical sanction approvals, and tender document issuance in conformity with Manipur public service norms.
               </p>
-              <div className="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between text-xs font-ibm-sans">
-                <span className="text-gray-500 font-ibm-mono">Grievance SLA: 15 Working Days</span>
-                <Link href="#grievance" className="font-semibold text-[#D85C3A] hover:underline">
-                  View Charter &rarr;
+              <div className="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between gap-3 text-xs font-ibm-sans">
+                <span className="text-gray-500 font-ibm-mono text-[11px] sm:text-xs">Grievance SLA: 15 Working Days</span>
+                <Link
+                  href="#grievance"
+                  className="font-semibold text-[#D85C3A] hover:text-[#C04E2E] inline-flex items-center gap-1 shrink-0 whitespace-nowrap group transition-colors"
+                >
+                  <span className="group-hover:underline">View Charter</span>
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                 </Link>
               </div>
             </div>

@@ -132,7 +132,7 @@ export default function Tenders() {
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-gray-400 font-normal">{tender.date}</span>
-                  <span className="text-[#D85C3A] font-semibold group-hover:underline text-[11px]">
+                  <span className="text-[#D85C3A] font-semibold group-hover:underline text-[11px] whitespace-nowrap">
                     Details &rarr;
                   </span>
                 </div>
@@ -145,26 +145,26 @@ export default function Tenders() {
       {/* Tender Details Modal */}
       {selectedTender && (
         <div
-          className="fixed inset-0 z-50 bg-[#061D2B]/75 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto animate-in fade-in duration-150"
+          className="fixed inset-0 z-50 bg-[#061D2B]/75 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4 overflow-y-auto animate-in fade-in duration-150"
           onClick={() => setSelectedTender(null)}
           role="dialog"
           aria-modal="true"
           aria-labelledby="tender-modal-title"
         >
           <div
-            className="bg-white rounded-lg border border-[#D9DEE2] max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative animate-in zoom-in-95 duration-200"
+            className="bg-white rounded-lg border border-[#D9DEE2] max-w-3xl w-full shadow-2xl relative animate-in zoom-in-95 duration-200 overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header */}
-            <div className="bg-[#061D2B] text-white p-5 sm:p-6 flex items-start justify-between border-b border-[#102B3C]">
+            <div className="bg-[#061D2B] text-white px-5 py-3.5 sm:px-6 sm:py-4 flex items-center justify-between border-b border-[#102B3C]">
               <div>
-                <div className="flex items-center gap-2 mb-1.5">
+                <div className="flex items-center gap-2 mb-1">
                   <span className="w-2 h-2 rounded-full bg-[#D85C3A]" />
                   <span className="text-[10px] sm:text-[11px] font-bold tracking-wider uppercase font-ibm-mono text-gray-300">
                     MTDC NOTICE INVITING TENDER / PROCUREMENT
                   </span>
                 </div>
-                <div className="flex items-center gap-2 text-[11px] text-gray-300 font-ibm-mono mt-1">
+                <div className="flex items-center gap-2 text-[11px] text-gray-300 font-ibm-mono">
                   <span>Ref: {selectedTender.refNo}</span>
                 </div>
               </div>
@@ -179,11 +179,11 @@ export default function Tenders() {
             </div>
 
             {/* Modal Body */}
-            <div className="p-6 sm:p-7 space-y-5">
+            <div className="px-5 py-4 sm:px-6 sm:py-4.5 space-y-3">
               {/* Status and Document format */}
               <div className="flex items-center gap-2">
                 <span
-                  className={`px-2.5 py-0.5 rounded text-[11px] font-semibold font-ibm-mono border ${
+                  className={`px-2.5 py-0.5 rounded text-[10.5px] font-semibold font-ibm-mono border ${
                     selectedTender.status === "Corrigendum"
                       ? "bg-amber-50 text-amber-700 border-amber-200"
                       : "bg-emerald-50 text-emerald-800 border-emerald-200"
@@ -191,7 +191,7 @@ export default function Tenders() {
                 >
                   {selectedTender.status}
                 </span>
-                <span className="px-2.5 py-0.5 rounded bg-[#F0F4F7] text-[#102B3C] text-[11px] font-medium font-ibm-mono">
+                <span className="px-2.5 py-0.5 rounded bg-[#F0F4F7] text-[#102B3C] text-[10.5px] font-medium font-ibm-mono">
                   Document Size: {selectedTender.fileSize}
                 </span>
               </div>
@@ -199,25 +199,25 @@ export default function Tenders() {
               {/* Title */}
               <h3
                 id="tender-modal-title"
-                className="text-xl sm:text-[22px] font-extrabold text-[#102B3C] font-manrope leading-snug"
+                className="text-lg sm:text-[20px] font-extrabold text-[#102B3C] font-manrope leading-snug"
               >
                 {selectedTender.title}
               </h3>
 
               {/* Summary Description */}
-              <p className="text-[13.5px] text-gray-700 font-ibm-sans leading-relaxed">
+              <p className="text-[12.5px] sm:text-[13px] text-gray-700 font-ibm-sans leading-relaxed">
                 {selectedTender.description}
               </p>
 
               {/* Timeline Box */}
-              <div className="bg-[#F6F7F5] border border-[#D9DEE2] rounded-md p-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="bg-[#F6F7F5] border border-[#D9DEE2] rounded-md px-3.5 py-2.5 sm:px-4 sm:py-3 grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div className="flex items-start gap-2.5">
                   <Calendar className="w-4 h-4 text-[#D85C3A] shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-gray-400 font-ibm-mono block">
+                    <span className="text-[9.5px] font-bold uppercase tracking-wider text-gray-400 font-ibm-mono block">
                       PUBLISHED DATE
                     </span>
-                    <span className="text-[13px] font-bold text-[#102B3C] font-ibm-sans">
+                    <span className="text-[12.5px] font-bold text-[#102B3C] font-ibm-sans">
                       {selectedTender.date}
                     </span>
                   </div>
@@ -226,10 +226,10 @@ export default function Tenders() {
                 <div className="flex items-start gap-2.5">
                   <Clock className="w-4 h-4 text-[#D85C3A] shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-gray-400 font-ibm-mono block">
+                    <span className="text-[9.5px] font-bold uppercase tracking-wider text-gray-400 font-ibm-mono block">
                       SUBMISSION DEADLINE
                     </span>
-                    <span className="text-[13px] font-bold text-[#D85C3A] font-ibm-sans">
+                    <span className="text-[12.5px] font-bold text-[#D85C3A] font-ibm-sans">
                       {selectedTender.closingDate}
                     </span>
                   </div>
@@ -237,8 +237,8 @@ export default function Tenders() {
               </div>
 
               {/* Guidelines Note */}
-              <div className="flex items-start gap-2 text-[12px] text-gray-500 font-ibm-sans bg-amber-50/50 border border-amber-200/50 p-3 rounded">
-                <ShieldCheck className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+              <div className="flex items-start gap-2 text-[11.5px] text-gray-500 font-ibm-sans bg-amber-50/50 border border-amber-200/50 p-2.5 rounded">
+                <ShieldCheck className="w-3.5 h-3.5 text-amber-600 shrink-0 mt-0.5" />
                 <span>
                   Bidders must submit bids through the state e-procurement portal or submit sealed physical tenders at the MTDC Imphal office prior to the closing deadline.
                 </span>
@@ -246,11 +246,11 @@ export default function Tenders() {
             </div>
 
             {/* Modal Footer */}
-            <div className="p-4 sm:p-5 bg-[#F9FAFB] border-t border-[#D9DEE2] flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div className="px-5 py-3 sm:px-6 sm:py-3 bg-[#F9FAFB] border-t border-[#D9DEE2] flex flex-col sm:flex-row items-center justify-between gap-2.5">
               <Link
                 href="/resources?tab=tenders"
                 onClick={() => setSelectedTender(null)}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2 text-[12.5px] font-semibold text-white bg-[#D85C3A] hover:bg-[#C04E2E] rounded transition-colors font-ibm-sans"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-3.5 py-1.5 text-[12px] font-semibold text-white bg-[#D85C3A] hover:bg-[#C04E2E] rounded transition-colors font-ibm-sans"
               >
                 <FileText className="w-3.5 h-3.5" />
                 <span>Open in Resources &amp; Downloads</span>
@@ -258,7 +258,7 @@ export default function Tenders() {
               <button
                 type="button"
                 onClick={() => setSelectedTender(null)}
-                className="w-full sm:w-auto px-5 py-2 text-[12.5px] font-medium text-gray-700 bg-white border border-[#D9DEE2] hover:bg-gray-50 rounded transition-colors font-ibm-sans cursor-pointer"
+                className="w-full sm:w-auto px-4 py-1.5 text-[12px] font-medium text-gray-700 bg-white border border-[#D9DEE2] hover:bg-gray-50 rounded transition-colors font-ibm-sans cursor-pointer"
               >
                 Close
               </button>

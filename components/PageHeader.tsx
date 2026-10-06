@@ -40,7 +40,7 @@ export default function PageHeader({
                   {crumb.label}
                 </Link>
               ) : (
-                <span className="text-[#D85C3A] font-medium">{crumb.label}</span>
+                <span className="text-white font-medium">{crumb.label}</span>
               )}
             </React.Fragment>
           ))}
